@@ -1,0 +1,88 @@
+@use './global' as *;
+
+.footer{
+    padding: 50px 20px 20px 20px;
+    background: $dark-color;
+    
+    &__content{
+        max-width: 1400px;
+        margin: 0 auto;
+        &__informacoes{
+            &-lg{
+                img{
+                    width: 15%;
+                }
+                p{
+                    color: $light-color;
+                    font-size: 12px;
+                    width: 200px;
+                }
+            }
+            
+        }
+        &__info{
+            margin-bottom: 20px;
+            h3{
+                color: $white;
+                font-family: 'Lora', sans-serif;
+            }
+            p{
+                color: $light-color;
+                font-size: 12px;
+                width: 120px;
+
+            }
+        }
+        hr{
+            margin-top: 10px;
+            color: $light-color;
+        }
+        &__redes{
+            margin-top: 30px;
+            &-logos{
+                @include flexCenter(row, center);
+                button{
+                    margin: 0px 10px;
+                    cursor: pointer;
+                }
+            }
+            
+            p{
+                text-align: center;
+                color: $light-color;
+                font-size: 12px;
+            }
+        }
+    }
+    
+
+    @include mq(md){
+        &__content{
+            &__informacoes{
+                @include flexCenter(row, space-between);
+                img{
+                    width: 25%;
+                }
+                p{
+                    color: $light-color;
+                    font-size: 13px;
+                    width: 200px;
+                }
+                
+            }
+            &__info{
+                @include flexCenter(row, space-around);
+
+                &-end{
+                    margin: 0px 10px;
+                }
+
+            }
+            &__redes{
+                @include flexCenter(row, space-between);
+            }
+
+        }
+        
+    }
+}

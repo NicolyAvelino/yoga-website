@@ -1,0 +1,42 @@
+@use './global' as *;
+@use './header' as header;
+@use './list' as list;
+@use './health' as health;
+@use './routine' as routine;
+@use './follow' as follow;
+@use './news' as news;
+@use './footer' as footer;
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    background-color: $body-color;
+}
+h2{
+    color: $title-color;
+    font-size: 30px;
+    font-family: 'Lora', sans-serif;
+    @include mq('md'){
+        font-size: 56px;
+    }
+}
+p {
+    font-size: 15px;
+    color: $text-color;
+
+    @include mq('md'){
+        font-size: 16px;
+    }
+}
+img{
+    width: 100%;
+}
+button{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0px;
+}
+

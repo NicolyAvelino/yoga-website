@@ -1,0 +1,124 @@
+@use './global' as *;
+
+.follow {
+    padding: 10px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__content {
+        text-align: center;
+        @include flexCenter(column, space-between);
+
+        .text-mob {
+            display: block;
+
+            h2 {
+                display: inline-block;
+                width: 250px;
+
+                span {
+                    background: $gradient-color;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+            a{           @include estilizacaoBotao();
+            }
+        }
+
+        &-img1 {
+            @include flexCenter(row, space-between);
+
+            img {
+                width: 50%;
+
+                &:nth-of-type(2) {
+                    padding-left: 10px;
+                    position: relative;
+                    top: 60px;
+                }
+            }
+
+            .text-desk {
+                display: none;
+            }
+
+
+
+        }
+
+        &-img2 {
+            margin-top: 50px;
+
+            img {
+                margin-bottom: 20px;
+                width: 80%;
+
+                &:nth-of-type(1) {
+                    left: -30px;
+                    position: relative;
+                }
+
+                &:nth-of-type(2) {
+                    left: 40px;
+                    position: relative;
+                }
+            }
+
+        }
+
+    }
+
+    @include mq(md) {
+        padding: 30px 25px 15px 25px;
+
+        &__content {
+            .text-mob {
+                display: none;
+            }
+
+            &-img1 {
+
+                img {
+                    width: 30%;
+
+                    &:nth-of-type(2) {
+                        position: inherit;
+                        top: 0;
+                    }
+                }
+
+                .text-desk {
+                    display: block;
+                    margin: 0px 30px;
+
+                    h2 {
+                        width: 350px;
+                        span {
+                            background: $gradient-color;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                        }
+                    }
+                    a{
+                        @include estilizacaoBotao();
+
+                    }
+                }
+
+            }
+
+            &-img2 {
+                @include flexCenter(row, space-between);
+
+                img {
+                    width: 50%;
+
+                }
+
+
+            }
+
+        }
+    }
+}
